@@ -7,7 +7,7 @@ use SilverStripe\Core\Config\Config;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Forms\CompositeField;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 use SilverStripe\Versioned\Versioned;
 use UncleCheese\BetterButtons\Buttons\BetterButton;
 use UncleCheese\BetterButtons\FormFields\DropdownFormAction;
@@ -22,7 +22,7 @@ use UncleCheese\BetterButtons\FormFields\DropdownFormAction;
  * @author  Uncle Cheese <unclecheese@leftandmain.com>
  * @package  silverstripe-gridfield-betterbuttons
  */
-class BetterButtonDataObject extends DataExtension
+class BetterButtonDataObject extends Extension
 {
     /**
      * Enable better buttons for this DataObject

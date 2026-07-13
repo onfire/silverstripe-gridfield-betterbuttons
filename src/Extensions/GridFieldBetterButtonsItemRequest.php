@@ -12,9 +12,8 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\GridField\GridFieldDetailForm_ItemRequest;
 use SilverStripe\Forms\TabSet;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 use SilverStripe\ORM\DataList;
-use SilverStripe\ORM\DataModel;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\DB;
 use SilverStripe\ORM\ManyManyList;
@@ -32,7 +31,7 @@ use UncleCheese\BetterButtons\Interfaces\BetterButton_Versioned;
  * @author  Uncle Cheese <unclecheese@leftandmain.com>
  * @package  silverstripe-gridfield-betterbuttons
  */
-class GridFieldBetterButtonsItemRequest extends DataExtension
+class GridFieldBetterButtonsItemRequest extends Extension
 {
     /**
      * @var array Allowed controller actions
@@ -72,7 +71,7 @@ class GridFieldBetterButtonsItemRequest extends DataExtension
     {
         $req = new BetterButtonsCustomActionRequest($this, $this->owner, $this->owner->ItemEditForm());
 
-        return $req->handleRequest($r, DataModel::inst());
+        return $req->handleRequest($r);
     }
 
     /**
@@ -86,7 +85,7 @@ class GridFieldBetterButtonsItemRequest extends DataExtension
     {
         $req = new BetterButtonsNestedFormRequest($this, $this->owner, $this->owner->ItemEditForm());
 
-        return $req->handleRequest($r, DataModel::inst());
+        return $req->handleRequest($r);
     }
 
     /**

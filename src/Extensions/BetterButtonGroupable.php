@@ -2,14 +2,14 @@
 
 namespace UncleCheese\BetterButtons\Extensions;
 
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 
 /**
  * Injects the "isGrouped" flag into Actions and Buttons
  *
  * @author Uncle Cheese <unclecheese@leftandmain.com>
  */
-class BetterButtonGroupable extends DataExtension
+class BetterButtonGroupable extends Extension
 {
     /**
      * Is the button part of a group, e.g. DropdownFormAction
